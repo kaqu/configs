@@ -1,0 +1,69 @@
+
+theme = "ayu_mirage"
+
+[editor]
+auto-pairs=false
+bufferline = "multiple"
+clipboard-provider = "pasteboard"
+default-yank-register = "+"
+gutters = [
+  "diagnostics",
+  "spacer",
+  "line-numbers",
+  "spacer",
+  "diff",
+]
+auto-completion = true
+auto-format = true
+end-of-line-diagnostics = "hint"
+text-width = 80
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+max-indent-retain = 40
+wrap-indicator = "↪ "
+wrap-at-text-width = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+[editor.auto-save]
+focus-lost=true
+
+[editor.whitespace]
+render="all"
+
+[editor.indent-guides]
+render=true
+character = "|"
+skip-levels = 1
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "block"
+select = "bar"
+
+[editor.lsp]
+auto-signature-help = true
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control" ]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.normal]
+"C-," = "goto_previous_buffer"
+"C-." = "goto_next_buffer"
+"C-w" = ":buffer-close"
+"C-o" = "file_picker"
+
